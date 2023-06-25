@@ -130,17 +130,6 @@ public class StorageManager : MonoBehaviour
             string destinationPath = Path.Combine(imageFolderPath, fileName);
             File.Copy(images, destinationPath, true);
             Debug.Log(destinationPath);
-            foreach (string videos in DataVideo)
-            {
-                //string fileName1 = Path.GetFileName(videos);
-                string fileName1 = Path.GetFileName(images); // for test only
-                string videofilename = fileName1 + fileName; // for test only
-                string destinationPath1 = Path.Combine(videoFolderPath, videofilename); // for test only
-                //string destinationPath1 = Path.Combine(videoFolderPath, fileName1);
-                File.Copy(videos, destinationPath1, true);
-                Debug.Log(destinationPath1);
-                break;
-            }
         }
 
         #region For Test Only (rename Video Script)
@@ -169,7 +158,7 @@ public class StorageManager : MonoBehaviour
         */
         #endregion
 
-        /*
+        
         foreach (string videos in DataVideo)
         {
             string fileName = Path.GetFileName(videos);
@@ -180,7 +169,7 @@ public class StorageManager : MonoBehaviour
             Debug.Log(destinationPath);
             break;
         }
-        */
+        
         Debug.Log("Data copied to Appdata folder.");
     }
 
